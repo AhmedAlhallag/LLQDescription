@@ -1,0 +1,637 @@
+/* ------------------------------- */
+/* -------- BASIC SETUP --------- */
+/* ------------------------------- */
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html{
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  text-rendering: optimizeLegibility;
+  color:#555;
+  font-size: 20px;
+  background-color: rgb(240, 240, 240)
+}
+
+.clearfix{
+  zoom: 1 ;
+}
+
+.clearfix:after{
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0
+
+
+}
+
+/* ------------------------------- */
+/* -------- REUSABLE COMPONENTS --------- */
+/* ------------------------------- */
+.row{
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.feature-section {
+  /* could have used margin, but using padding iis better if we wwant to give the section a background color */
+  padding: 80px 0 ;
+}
+
+.box{
+  /* this is so important for columns with texts/or text and images ;
+   it adds a balanced padding between all the corners*/
+  padding: 1%
+}
+/* ------------------------------- */
+/* -------- HEADINGS --------- */
+/* ------------------------------- */
+h1,
+h2,
+h3{
+  font-weight: 300;
+  text-transform: uppercase;
+
+}
+h2 span {
+  font-size: 0.8em;
+  text-align: left;
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+  color:rgb(34, 154, 241)
+}
+
+h1{
+  word-spacing: 3px;
+  margin: 15px;
+  color: #f94444;
+  font-weight: 400;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  display: inline-block;
+  letter-spacing: 1px;
+
+}
+h2{
+  font-weight: 300;
+  font-size: 1.8em;
+  font-family: "Avenir Next LT Pro", "Lato";
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  margin-top: 20px
+}
+
+h3{
+  /* font-family: "Avenir Next LT Pro", "Lato"; */
+  margin-bottom: 30px;
+  font-size: 1.1em;
+  /* font-weight: 300 */
+  word-spacing: 4px
+}
+
+
+h2::after{
+  display: block;
+  background-color: #ef6d17;
+  height: 2px;
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 20px
+
+}
+
+
+
+/* =========== PARAGRAPHS =========== */
+
+.long-text{
+  line-height: 145%;
+  /* text-align: center; */
+  /* instead of making it aligned center, we can confine the width then center the whole thing */
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  text-align:center;
+  margin-bottom: 30px
+}
+
+.box p {
+  line-height: 125%;
+  font-size: 90%;
+  text-align: justify;
+}
+
+
+
+
+/* =========== MEAL IMAGES =========== */
+/* Note:
+using a 100% width  and a display inline block for the li's
+then using nowrap for the parent will actually work if you have 2-3 images in ONE row
+ */
+.images-section {
+  padding: 0 ;
+
+}
+
+.meals-unorderedlist{
+  width: 100%;
+  /* this can be applied on the section as well */
+  list-style:none;
+
+}
+
+.meals-unorderedlist li {
+  display:block;
+  width: 25% ;
+  float: left;
+
+}
+.meals-unorderedlist li .meal-figure {
+  width: 100%;
+  overflow: hidden;
+  background: black
+  /* REALLY IMPORTANT:
+  the overflow : hidden should be applied to the direct parent
+   */
+
+}
+
+.meals-unorderedlist li .meal-figure img{
+  width: 100%;
+  height: auto;
+  opacity: 0.70 ;
+  transform: scale(1.15);
+  transition: transform 0.7s ,  opacity 0.6s ;
+}
+
+.meals-unorderedlist li .meal-figure img:hover{
+  transform: scale(1.03) ;
+  opacity: 1
+}
+
+
+
+/* ========== HOW IT WORKS - STEPS ==========*/
+.howitworks-section{
+  padding: 80px 0;
+  background-color: rgba(241, 241, 241, 1);
+}
+
+.steps-box:first-child {
+
+  /* text-align: right; */
+  /* padding-right: 3%; */
+  margin-top: 30px;
+  position: relative;
+  left: 14%
+}
+
+.steps-box:last-child {
+  /* padding-left: 3%; */
+  margin-top: 90px;
+  position: relative;
+  right: 11%
+}
+
+.steps-box .phone-img{
+  width: 41% ;
+  height: auto;
+}
+
+/* I think when there is multiple instances of the same class; last of type should be used */
+.howitworks-steps:last-of-type{
+  margin-bottom: 93px
+}
+
+.howitworks-steps{
+  margin-bottom: 50px
+}
+
+.howitworks-steps .number{
+  border: 2px solid #ef6d17;
+  color: #ef6d17;
+  font-size: 125%;
+  display:inline-block ;
+  padding: 8px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  float: left;
+  margin-right: 25px
+}
+
+.btn-app img{
+  height: 65px;
+  width: auto;
+  margin-right: 15px;
+}
+
+.btn-app .left-img {
+  margin-left: 45px
+}
+
+/* ===========  CITIES  =========== */
+
+.cities-section {
+padding: 80px 0px;
+
+
+}
+
+.box img{
+  max-width: 100%;
+  margin-bottom: 15px;
+  height: auto;
+}
+
+.cities-section h3 {
+font-family: "Avenir Next LT Pro", "Lato", sans-serif;
+margin-bottom: 25px
+}
+
+
+
+.box .city-info p{
+  font-size: 95%;
+  display: inline-block;
+  margin-left: 10px;
+
+}
+
+.city-info {
+  margin: 5px 0px;
+  /* overflow: hidden; */
+}
+
+.city-link{
+  text-decoration: none;
+  color: #ef6d17;
+  border-bottom: 1px solid #ef6d17;
+  transition: border-bottom 0.35s ease-in-out , color 0.35s ease-in-out;
+}
+
+.city-link:hover  {
+border-bottom: 1px solid transparent ;
+color: #555
+}
+.shifted{
+  position: relative;
+  left: -2%
+}
+
+
+ /* ================= TESTIMONIALS ================= */
+
+.testimonials-section{
+  color: #fff ;
+  font-family: "Avenir Next LT Pro", "Lato", sans-serif;
+  padding: 80px 0;
+  background-image: linear-gradient(rgb(0, 0, 0, 0.70), rgb(0, 0, 0, 0.70)), url("../img/back-customers.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+blockquote{
+  font-weight: 200;
+  padding: 2% ;
+  width: 88%;
+  line-height: 140%;
+  font-style: italic;
+  /* word-wrap: break-word; */
+  /* text-align: justify; */
+  /* padding-bottom: 50px; */
+  opacity: 0.92
+}
+
+blockquote::before{
+  content: "\201C";
+  display: block;
+  font-size: 500%;
+  font-style: normal;
+  font-family: "Lato";
+  font-weight: 100;
+  position: relative;
+  left: -20px;
+  top: 15px
+
+
+}
+
+cite{
+  display: block;
+  padding-top: 50px;
+  font-size: 85%;
+}
+cite span {
+  opacity: 0.75
+}
+cite img {
+height: 55px;
+width: auto;
+border-radius: 50%;
+vertical-align: middle;
+margin-right: 10px
+}
+
+.div-quote{
+  height: 198px;
+}
+
+.before-testimonials{
+  padding-top: 50px
+}
+
+/* ------------------------------- */
+/* -------- SIGN-UP PLANS --------- */
+/* ------------------------------- */
+
+.plans-section{
+
+background-color: #f4f4f4;
+padding: 80px 0;
+}
+
+.plans-section h2{
+  margin-bottom: 50px;
+}
+.plans-section h3{
+padding: 7% 5% 4% 8%;
+color: rgb(61, 61, 61);
+margin-bottom: 0;
+font-size: 98%
+
+}
+
+/* .addition{
+  border-radius: 20px;
+  background-color: red
+} */
+.plan-card{
+
+  background-color: #fff;
+  /* text-align: center; */
+  /* padding: 5%; */
+  width: 90%;
+  margin-left: 5%;
+  /* border-top-left-radius: 20px;
+  border-top-right-radius: 20px; */
+
+  border-radius: 20px;
+  box-shadow: 0px 2px 2px #efefef;
+  transform: scale(1);
+  transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out ;
+}
+
+.plan-card:hover{
+  box-shadow: -9px 4px 2px #efefef ;
+  transform: scale(1.065);
+
+}
+
+.plan-price-month{
+  font-size: 290%;
+  color:#fb8a3f;
+  padding-bottom: 10px;
+  padding: 10px 10px 10px 23px
+}
+
+
+
+.plan-price-month span{
+font-size: 35%;
+}
+.plan-price-meal{
+  padding-bottom: 10px;
+  padding: 0px 10px 0px 24px;
+  font-size: 83%
+}
+
+.plan-card div{
+  border-bottom: 1px solid rgb(219, 219, 219);
+  padding-bottom: 12px
+
+}
+
+.plan-card ul{
+  list-style: none;
+  padding-top: 10px
+
+}
+
+.plan-card ul li{
+padding-bottom: 3px;
+font-size: 85%;
+
+}
+
+.plan-card div:last-child{
+  text-align: center;
+  padding: 35px 0px 40px 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: 0 ;
+}
+
+.plan-card div:first-child{
+  background-color: rgba(244, 243, 240, 0.31)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========= ICONS ========= */
+
+.the-icon {
+
+  color: #ef6d17 ;
+  font-size: 350% ;
+  margin-bottom: 10px;
+  display: block;
+
+}
+
+.city-icon{
+font-size : 120%;
+color: #ef6d17;
+width: 10%;
+text-align: center;
+display: inline-block;
+line-height: 127%;
+/* An important note:
+1)  I did not know that width of an icon (or any inline thing) would'nt change because
+    the display isnt "inline-block"
+2)  Icons beside text is easily adjusted once you adjust the icons;
+    by adjusting the width; then the line height; the aligning them to the center
+3)  To modify the margin with negative values; you should use 'vertical-align: middle' before hand
+ */
+
+}
+
+.ion-ios-person{
+  vertical-align: middle;
+  margin-top: -5px;
+}
+.ion-ios-star{
+  vertical-align: middle;
+  margin-top: -9px;
+}
+
+.ion-social-twitter{
+  vertical-align: middle;
+  margin-top: -1px;
+}
+
+
+.checkmark-icon{
+  font-size : 120%;
+  color: #ef6d17;
+  width: 15%;
+  text-align: center;
+  display: inline-block;
+  line-height: 127%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------- */
+/* -------- BUTTONS --------- */
+/* ------------------------------- */
+.btn {
+  text-decoration: none;
+  padding: 0px 30px;
+  padding-top: 10px;
+  padding-bottom: 14px;
+  font-weight: 300;
+  border-radius: 200px;
+  transition: background-color 0.44s ease-in-out, border 0.44s ease-in-out, color 0.44s ease-in-out
+}
+
+.btn-full{
+  background-color: #ef6d17;
+  color:#fff;
+  border: 1px  solid #e67e22;
+  margin-right: 20px;
+}
+
+.btn-ghost{
+  color: #e67e22;
+  border: 1px  solid #e67e22;
+}
+
+.btn:hover{
+  background-color: #ef6d17;
+}
+
+.btn-ghost:hover{
+  color:#fff;
+  border: 1px  solid #ef6d17;
+}
+
+.btn-full:hover{
+  border: 1px  solid #ef6d17;
+  background-color: #bd520b;
+}
+
+
+
+/* ------------------------------- */
+/* -------- HEADER --------- */
+/* ------------------------------- */
+.header-img{
+  background-image: linear-gradient(rgb(0, 0, 0, 0.70), rgb(0, 0, 0, 0.70)), url('../img/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  background-attachment: fixed;
+
+}
+
+.header-content{
+  position: absolute;
+  width: 64%;
+  /* Msh moktn3 en lazm yb2a feh width; breaks the responsivness made by the transform */
+  /* Note: when stacking so many content (text) in the h1 (child of this elem) the h1 might stack text verticaly since it finds no specified width set for the parent div (this elem) */
+  /* although tb3n enha bt break el responsivness */
+  left: 50%;
+  top:50%;
+  transform: translate(-56%,-50%);
+  /* translate: take two arguments: the left-right scale percentage, and the top-bottom scale percentage*/
+  /* I think it needs a top/bottom and a left/right to be set before hand for it to work properly */
+}
+
+.main-nav{
+  list-style: none;
+  float: right;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin-left: 40px;
+  margin-top: 51px
+
+}
+.main-nav li a {
+  color:rgba(255, 255, 255, 0.76);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 300;
+  border-bottom: 1.5px solid transparent;
+  padding-bottom:  5px;
+  transition: border-bottom 0.24s ease-in-out, color 0.24s ease-in-out;
+  font-size: 0.91em
+
+}
+
+.logo{
+  float: left;
+  height: 94px;
+  width: auto;
+  /* I think auto get/updates the image width with the
+  automated returned/adjusted width after the specified height is set  */
+  margin-top: 20px;
+  margin-left: 28px
+}
+
+.main-nav li a:hover{
+  border-bottom: 1.5px solid #eb8f3e;
+  color:rgba(255, 255, 255, 1);
+
+}
